@@ -1,7 +1,9 @@
 FROM ubuntu:16.04
 MAINTAINER Alexey Vinogradov <aleksey.vinogradov@rt.ru>
 
-RUN apt-get -q -y install python3, git, python3-pip
+RUN apt-get update
+
+RUN apt-get -q -y install python3-dev, git, python3-pip
 RUN pip install --no-cache-dir virtualenv
 
 # base libs, check: python3, git
