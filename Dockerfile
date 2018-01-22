@@ -13,4 +13,4 @@ RUN git clone https://github.com/Tenchi88/smart_telegram_bot.git
 RUN pip3 install -r smart_telegram_bot/requirements.txt
 
 RUN cd smart_telegram_bot
-CMD python3 smart_bot.py
+CMD cd smart_telegram_bot && python3 smart_bot.py
