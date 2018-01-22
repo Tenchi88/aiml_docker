@@ -1,7 +1,7 @@
-FROM xaviercalland/docker-python-virtualenv
+FROM ubuntu:16.04
 MAINTAINER Alexey Vinogradov <aleksey.vinogradov@rt.ru>
 
-RUN apt-get update
+RUN pip install --no-cache-dir virtualenv
 
 #RUN virtualenv venv
 #RUN source venv/bin/activate
