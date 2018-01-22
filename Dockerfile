@@ -7,11 +7,11 @@ RUN apt-get -q -y install python3-dev git python3-pip
 RUN pip3 install --upgrade pip
 RUN pip3 install --no-cache-dir virtualenv
 
-# source download from gitlab
+RUN virtualenv venv
+RUN source venv/bin/activate
+RUN git clone https://github.com/Tenchi88/smart_telegram_bot.git
+RUN pip3 install -r smart_telegram_bot/requirements.txt
 
-#RUN virtualenv venv
-#RUN source venv/bin/activate
-#RUN pip install
-#RUN git clone https://github.com/Tenchi88/test.git
+RUN python3 smart_telegram_bot/smart_bot.py
 
-CMD sh
+CMD bash
