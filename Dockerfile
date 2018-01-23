@@ -13,7 +13,7 @@ RUN git clone https://github.com/Tenchi88/smart_telegram_bot.git
 RUN pip3 install -r smart_telegram_bot/requirements.txt
 
 RUN mkdir .ssh
-RUN python smart_telegram_bot/helpers/openshift.py
+RUN python3 smart_telegram_bot/helpers/openshift.py
 RUN chmod 400 .ssh/git_lab
 RUN ssh-agent bash -c 'ssh-add rsa; git clone git@git.digital.rt.ru:aleksey.vinogradov/AIML.git'
 RUN cp -r AIML smart_telegram_bot
