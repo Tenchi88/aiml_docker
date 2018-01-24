@@ -12,4 +12,4 @@ RUN /bin/bash -c "source venv/bin/activate"
 RUN git clone https://github.com/Tenchi88/smart_telegram_bot.git
 RUN pip3 install -r smart_telegram_bot/requirements.txt
 
-CMD mkdir .ssh && python3 smart_telegram_bot/helpers/openshift.py && chmod 400 .ssh/git_lab && sh
+#CMD mkdir .ssh && python3 smart_telegram_bot/helpers/openshift.py && chmod 400 .ssh/git_lab && sh
